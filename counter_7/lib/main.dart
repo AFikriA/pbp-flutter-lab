@@ -137,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Align(
               alignment: Alignment.bottomLeft,
-              child: FloatingActionButton(
+              child: (_counter == 0) ? Text("") : FloatingActionButton(
                 onPressed: _decrementCounter,
                 tooltip: 'Increment',
                 child: const Icon(Icons.remove),
