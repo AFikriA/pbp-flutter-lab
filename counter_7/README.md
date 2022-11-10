@@ -24,7 +24,7 @@ Statefull Widget merupakan Widget yang dapat berubah-ubah secara dinamis. Pada T
 
 ## Apa fungsi dari setState()? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
 
-fungsi setState() nantinya akan bertugas untuk memberitahu widget bahwa ada objek yang berubah pada state sehingga aplikasi akan memuat ulang widget tersebut dengan nilai yang sudah berubah. Bagian yang terdampak pada fungsi ini adalah variabel [_counter].
+setState() yang akan bertugas untuk memberitahu widget bahwa ada objek yang berubah pada State sehingga aplikasi akan memuat ulang widget tersebut dengan nilai yang sudah diubah. setState() yang berada pada fungsi _decrementCounter() dan _incrementCounter() akan berdampak pada variabel _counter yang akan melakukan perubahan angka saat increment dan pengurangan angka saat decrement.
 
 ## Jelaskan perbedaan antara const dengan final.
 
