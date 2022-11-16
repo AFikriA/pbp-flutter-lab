@@ -1,5 +1,51 @@
-# Tugas 7: Elemen Dasar Flutter
 Nama: Aulia Fikri Al Khawariz | NPM: 2106701160 | Kelas: C
+# Tugas 8: Flutter Form
+
+## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
+
+Navigator.push() menumpuk route teratas sebelumnya dengan widget baru. Penggunaan push pada navigator tidak menghapus widget sebelumnya, melainkan hanya ditumpuk dengan widget baru.
+Navigator.pushReplacement() menggantikan route teratas sebelumnya dengan widget baru. Penggunaan pushReplacement menggantikan widget sebelumnya dengan widget baru.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+- Scaffold, mengimplementasikan struktur layout visual desain material dasar.
+- AppBar(), terdiri dari toolbar dan kemungkinan widget lainnya. Biasanya menjadi judul (dari sebuah aplikasi atau halaman).
+- Text(), Menampilkan serangkaian teks dengan style-nya juga.
+- Center(), semua widget yang ada dalam Center akan diletakkan di bagian tengah.
+- Column(), semua widget yang ada dalam Column akan ditampilkan secara vertikal.
+- Row(), semua widget yang ada dalam Row akan ditampilkan secara horizontal.
+- Icon(), memberikan ikon pada sebuah widget.
+- Padding(), widget yang memasukkan anaknya dengan padding yang diberikan.
+- DropdownButton(), material design button untuk menampung list of item.
+- showDatePicke()r, material design untuk menampilkan dialog date picker.
+- dll.
+- 
+## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+
+- onPressed
+- onChange
+- onSaved
+- onTap
+- onHover
+- onFocusChange
+- onLongPress
+ 
+## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+
+Widget Navigator bekerja dengan menampilkan screen teratas pada stack of route dengan memperhatikan method yang digunakan pada object Navigator. Dalam melakukan navigasi ke layar baru, BuildContext yang menyimpan route widget akan diakses oleh Navigator dengan menggunakan method pada class Navigator seperti push(), pop(), pushReplacement(), dan lain-lain.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
+- Membuat halaman baru bernama tambah_budget dan data_budget
+- Membuat custom Drawer widget dengan menerapkan seperation concern by refactoring untuk ditampilkan di tiap halaman
+- Set up navigasi halaman pada Drawer
+- Membuat global List yang terletak pada root widget untuk menyimpan object Budget
+- Implementasi halaman form dengan beberapa widget TextFormField (judul dan nominal), DatePicker (tanggal), dan DropdownMenu (jenis)
+- Membuat Save button untuk menyimpan transaksi baru ke dalam global List
+- Menampilkan semua object Budget dengan custom Card widget dengan melakukan iterasi
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Tugas 7: Elemen Dasar Flutter
 
 ## Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
 
