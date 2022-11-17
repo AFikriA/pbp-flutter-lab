@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
 import 'package:counter_7/data_budget.dart';
 import 'package:counter_7/drawer.dart';
+import 'package:flutter/services.dart';
 
 class TambahBudgetPage extends StatefulWidget {
   const TambahBudgetPage({super.key});
@@ -93,6 +94,10 @@ class _TambahBudgetPageState extends State<TambahBudgetPage> {
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5.0),
                       )),
+                  keyboardType: TextInputType.number,
+                  inputFormatters: <TextInputFormatter>[
+                    FilteringTextInputFormatter.digitsOnly
+                  ],
                   onChanged: (String? value) {
                     setState(() {
                       _nominalBudget = value!;
@@ -142,6 +147,7 @@ class _TambahBudgetPageState extends State<TambahBudgetPage> {
                       _jenisBudget = value!;
                     });
                   },
+                  
                 ),
               ),
               Padding(
@@ -171,7 +177,6 @@ class _TambahBudgetPageState extends State<TambahBudgetPage> {
                 child: TextButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.blue),
-                    
                   ),
                   child: const Text(
                     "Simpan",
