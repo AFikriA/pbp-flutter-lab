@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/main.dart';
-import 'package:counter_7/data_budget.dart';
-import 'package:counter_7/drawer.dart';
+import 'package:counter_7/page/drawer.dart';
 import 'package:flutter/services.dart';
 
 class TambahBudgetPage extends StatefulWidget {
@@ -24,7 +22,7 @@ class TambahBudgetPage extends StatefulWidget {
 
 class BudgetItem {
   String judul;
-  String nominal;
+  int nominal;
   String jenis;
   DateTime date;
 
@@ -39,7 +37,7 @@ class BudgetItem {
 class _TambahBudgetPageState extends State<TambahBudgetPage> {
   final _formkey = GlobalKey<FormState>();
   String _judulBudget = "";
-  String _nominalBudget = "";
+  int _nominalBudget = 0;
   String _jenisBudget = "";
   DateTime _date = DateTime.now();
   @override
@@ -100,12 +98,12 @@ class _TambahBudgetPageState extends State<TambahBudgetPage> {
                   ],
                   onChanged: (String? value) {
                     setState(() {
-                      _nominalBudget = value!;
+                      _nominalBudget = int.parse(value!);
                     });
                   },
                   onSaved: (String? value) {
                     setState(() {
-                      _nominalBudget = value!;
+                      _nominalBudget = int.parse(value!);
                     });
                   },
                   validator: (String? value) {
