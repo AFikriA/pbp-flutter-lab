@@ -1,4 +1,37 @@
 Nama: Aulia Fikri Al Khawariz | NPM: 2106701160 | Kelas: C
+# Tugas 9: Integrasi Web Service pada Flutter
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Pengambilan data JSON tanpa membuat model dapat dilakukan. Secara behavioral, JSON sendiri merupakan suatu object dalam notasi Javascirpt di mana pada bahasa Dart, hal tersebut ekuivalen dengan Map di mana object yang terdiri dari key dengan value pair. Namun, pengambilan data JSON tanpa melakukan konversi ke dalam suatu model bukan merupakan best practice dalam pengimplementasiannya. Konversi data JSON ke dalam suatu model bertujuan untuk meminimalisir kesalahan pengambilan atau pengiriman data melalui http request yang akan ditampilkan pada sisi UI aplikasi.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+- Scaffold, untuk mengimplementasikan struktur umum material layout design
+- AppBar(), salah satu bagian dari struktur umum maetrial layout design untuk menampilkan konten pada bagian atas
+- Text(), berfungsi untuk menampilkan text
+- Container(), berfungsi untuk membungkus suatu widget dan memberikan pading serta pading
+- Column(), berfungsi untuk megatur layout widget secara perspektif vertikal
+- Row(), berfungsi untuk menatur layout widget secara perspektif horizontal
+- Padding(), berufngsi untuk memberikan jarak pada widget
+- Drawer(), menampilkan sebuah drawer dengan hamburger menu sebagai main icon
+- FutureBuilder(), widget untuk menggenerate array of widget berdasarkan suatu snapshot dengan memperhatikan teraksi snapshot terbaru
+- CheckBox(), checkbox memungkinkan pengguna untuk memilih beberapa opsi dari satu set. Widget Kotak centang mengimplementasikan komponen ini.
+- CircularProgressIndocator(), desain material lingkaran untuk indikator progress, yang berputar untuk menunjukkan bahwa aplikasi sedang sibuk.
+- dll.
+
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+
+Membuat sebuah function http request dengan method GET secara async untuk mengambil data ke pihak eksternal Pada function tersebut lakukan parsing dengan jsonDecode() untuk mengubah response String menjadi JSON Konversi object JSON ke dalam suatu Model object Gunakan widget FutrueBuilder untuk menampilkan widget-widget dengan snapshot data terbaru yang telah dikonversi menjadi sebuah object
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
+- Membuat sebuah halaman baru bernama mywatchlist dan detailwatchlist
+- Membuat sebuah object baru bernama WatchList 
+- Membuat sebuah remote data source bernama mywatchlist_remote_data_source 
+- Membuat sebuah async function dengan return type Future<List> pada MyWatchListRemoteDataSource Pada halaman WatchList, tambahkan sebuah builder yaitu FutureBuilder untuk menampilkan hasil GET resquest pada url mywatchlist Tambahkan beberapa conditional sesuai kondisi snapshot, tambahkan onTap untuk mendeteksi click event dan menambahkan functional navigasi ke halaman MyWatchListDetail
+- Membuat hal yang diperlukan untuk ketentuan detail tiap watchlist
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Tugas 8: Flutter Form
 
 ## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
